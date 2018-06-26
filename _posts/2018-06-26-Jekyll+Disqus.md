@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Jekyll+Disqus给个人博客添加评论（施工中）
+title: Jekyll+Disqus给个人博客添加评论
 key: 20180625
 tags:
 - 中文
@@ -76,3 +76,4 @@ disqus:
 #### 最后
 
 推送你的网站库，就可以刷新你的博客查看效果了！
+
