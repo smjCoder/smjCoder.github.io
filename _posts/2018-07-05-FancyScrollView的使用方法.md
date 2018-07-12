@@ -92,18 +92,15 @@ public class MyScrollViewCell : FancyScrollViewCell<MyCellDto>
 ### Inspector设置
 ![](/images/FancyScrollView/inspector.png)
 #### My Scroll View
-|---------------------+-----------------------------------|
-| 属性  | 说明   |
+| 属性           | 说明                                                         |
 | :------------- | :----------------------------------------------------------- |
 | Cell Interval  | 将单元格之间的间隔指定为 float.Epsilon ~ 1.0之间。           |
 | Cell Offset    | 指定单元格的偏移。例如，指定了0.5，在滚动位置为0的情况下，最初的单元格的位置是0.5。 |
 | Loop           | 开启后实现无限滚动。                                         |
 | Cell Base      | 指定单元格的Prefab。                                         |
 | Cell Container | 指定单元格的父元素。                                         |
-|---------------------+-----------------------------------|
 
 #### Scroll Position Controller
-|---------------------+-----------------------------------|
 | 属性                      | 说明                                                         |
 | :------------------------ | :----------------------------------------------------------- |
 | Viewport                  | 指定作为视图窗口的RectTransform。在指定的RectTransform的范围内进行手势的检测。 |
@@ -116,7 +113,6 @@ public class MyScrollViewCell : FancyScrollViewCell<MyCellDto>
 | Snap - Velocity Threshold | 指定Snap开始的阈值。                                         |
 | Snap - Duration           | 用秒数指定Snap时的移动时间。                                 |
 | Data Count                | 需要展示的数据总数量，一般从脚本内设置。                     |
-|---------------------+-----------------------------------|
 
 ## Q&A
 
