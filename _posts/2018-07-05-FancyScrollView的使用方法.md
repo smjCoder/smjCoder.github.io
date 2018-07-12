@@ -92,6 +92,7 @@ public class MyScrollViewCell : FancyScrollViewCell<MyCellDto>
 ### Inspector设置
 ![](/images/FancyScrollView/inspector.png)
 #### My Scroll View
+
 | 属性           | 说明                                                         |
 | :------------- | :----------------------------------------------------------- |
 | Cell Interval  | 将单元格之间的间隔指定为 float.Epsilon ~ 1.0之间。           |
@@ -101,6 +102,7 @@ public class MyScrollViewCell : FancyScrollViewCell<MyCellDto>
 | Cell Container | 指定单元格的父元素。                                         |
 
 #### Scroll Position Controller
+
 | 属性                      | 说明                                                         |
 | :------------------------ | :----------------------------------------------------------- |
 | Viewport                  | 指定作为视图窗口的RectTransform。在指定的RectTransform的范围内进行手势的检测。 |
