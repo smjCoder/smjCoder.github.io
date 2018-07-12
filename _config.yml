@@ -125,7 +125,9 @@ ga_anonymize_ip: false # Anonymize IP tracking for Analytics
 
 ## => Build
 ##############################
-markdown: kramdown
+markdown: redcarpet
+redcarpet: 
+    extensions: ["fenced_code_blocks", "tables", "highlight", "with_toc_data", "strikethrough", "underline"]
 highlighter: rouge
 permalink: date
 
