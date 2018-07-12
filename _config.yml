@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+﻿# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely need to edit after that.
@@ -17,7 +17,7 @@
 ## => Site Settings
 ##############################
 text_color_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-url: # the base hostname & protocol for your site e.g. https://www.someone.com
+url: https://blog.codertaox.com # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: # does not include hostname
 title: 一只猴子的博客
 description: > # this means to ignore newlines until "Language & timezone"
@@ -37,10 +37,10 @@ author:
   email: taoxu2870@outlook.com # your Email address e.g. someone@site.com
   facebook: # your Facebook username
   twitter: # your Twitter username
-  github: # your GitHub username
+  github: CoderTaoX # your GitHub username
   linkedin: # your Linkedin username
   googleplus: # your Google+ username
-  weibo: # your Weibo username
+  weibo: HTMogeko # your Weibo username
   douban: # your Douban username
 
 
