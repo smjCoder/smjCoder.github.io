@@ -1,17 +1,19 @@
 ---
-title: "Jekyll+Disqus给个人博客添加评论"
-date: 2018-06-26T19:25:00+08:00
-lastmod: 2018-06-26T19:25:00+08:00
-draft: false
-tags: ["Jekyll", "Disqus"]
-categories: ["Blog"]
-author: "CoderTaoX"
+layout: post
+title: Jekyll+Disqus给个人博客添加评论
+subtitle: 
+date: 2018-06-26
+author: JY
+header-img: 
+catalog: true
+tags: 
+    - Jekyll
+    - Disqus
 ---
 > 我的博客是使用Jekyll搭建的，如果只具有展示博文的功能，阅读者就只能单纯的接受或者拒绝我的思想。
 >
 > 如果有评论呢？我一定会与阅读我博文的人产生思想的碰撞！
 
-<!--more-->
 
 #### 第一步：注册Disqus账号
 

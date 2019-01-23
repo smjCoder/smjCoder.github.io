@@ -1,17 +1,19 @@
 ---
-title: "FancyScrollView的使用方法"
-date: 2018-07-05T19:14:00+08:00
-lastmod: 2018-07-05T19:14:00+08:00
-draft: false
-tags: ["Unity", "FancyScrollView"]
-categories: ["插件"]
-author: "CoderTaoX"
+layout: post
+title: FancyScrollView的使用方法
+subtitle: 
+date: 2018-07-05
+author: JY
+header-img: 
+catalog: true
+tags: 
+    - FancyScrollView
+    - Unity
 ---
 > FancyScrollView
 >
 > 一个通用的Unity ScrollView组件
 
-<!--more-->
 
 # FancyScrollView [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](http://mit-license.org)
 一个通用的ScrollView组件，可实现高度灵活的Cell动画。还支持无限滚动。

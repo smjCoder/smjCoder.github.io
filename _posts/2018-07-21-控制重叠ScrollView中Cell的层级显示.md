@@ -1,11 +1,14 @@
 ---
-title: "控制重叠ScrollView中Cell的层级显示"
-date: 2018-07-21T13:17:00+08:00
-lastmod: 2018-07-21T13:17:00+08:00
-draft: false
-tags: ["Unity"]
-categories: ["Unity"]
-author: "CoderTaoX"
+layout: post
+title: 控制重叠ScrollView中Cell的层级显示
+subtitle: 
+date: 2018-07-21
+author: JY
+header-img: 
+catalog: true
+tags: 
+    - Unity
+    - UGUI
 ---
 > 最近接到一个需求，需要实现一个居中放大并且有重叠部分的ScrollView，折腾了比较久的时间，最后使用了FancyScrollView的基本实现+个人的一些自定义实现了相关功能，在这里记录一下实现中间放大并进行层级管理的过程。
 
@@ -13,7 +16,6 @@ author: "CoderTaoX"
 
 ![](/images/FancyScrollView/ScrollView效果实现.png)
 
-<!--more-->
 
 从图中可以看出，居中显示的Cell位于最上层，也就是同一个父类（content）的最下方，但是FancyScrollView只实现了不重叠Cell的中间放大效果，因为只要不是重叠的Cell，这种放大效果是不会穿帮的。
 

@@ -1,11 +1,14 @@
 ---
-title: "关于Unity3D通过代码控制编译XCode工程"
-date: 2018-06-22T13:26:00+08:00
-lastmod: 2018-06-22T13:26:00+08:00
-draft: false
-tags: ["SDK"]
-categories: ["Unity"]
-author: "CoderTaoX"
+layout: post
+title: 关于Unity3D通过代码控制编译XCode工程
+subtitle: 
+date: 2018-06-22
+author: JY
+header-img: 
+catalog: true
+tags: 
+    - SDK
+    - Unity
 ---
 > 最近在工作中遇到了一些集成SDK的问题，由于整个框架都是自动化的，所以SDK得集成也需要把所需的编译环境和启动代码写在Unity的脚本中。这两天也查找了很多资料，最终完成了集成，在这里记录一下过程和重点。
 

@@ -1,15 +1,16 @@
 ---
-title: "Mesh中的material与sharedMaterial"
-date: 2018-08-26T13:30:00+08:00
-lastmod: 2018-08-26T13:30:00+08:00
-draft: false
-tags: ["Unity"]
-categories: ["Unity"]
-author: "CoderTaoX"
+layout: post
+title: Mesh中的material与sharedMaterial
+subtitle: 
+date: 2018-08-26
+author: JY
+header-img: 
+catalog: true
+tags: 
+    - Unity
 ---
 > 改变Mesh的material时的注意事项
 
-<!--more-->
 
 也是解决Bug时发现的问题，我们的美术发现他们使用的材质在Editor下和客户端下的offset移动速度不一样，在手机端明显要快两倍到三倍。
 
