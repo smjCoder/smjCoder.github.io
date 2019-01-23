@@ -10,19 +10,17 @@ tags:
     - FancyScrollView
     - Unity
 ---
+
 > FancyScrollView，一个通用的Unity ScrollView组件
 >
-
-
-
 
 # FancyScrollView [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](http://mit-license.org)
 一个通用的ScrollView组件，可实现高度灵活的Cell动画。还支持无限滚动。
 
 
-![](/images/FancyScrollView/logo.png)
-![](/images/FancyScrollView/screencast1.gif)
-![](/images/FancyScrollView/screencast2.gif)
+![](https://ws4.sinaimg.cn/large/006tNc79ly1fzgwhfecpjj30hs081wf3.jpg)
+![](https://ws3.sinaimg.cn/large/006tNc79ly1fzgwhfcldag30hs0a27br.gif)
+![](https://ws4.sinaimg.cn/large/006tNc79ly1fzgwlxc1ucg30hs0a2k3p.gif)
 
 ## 工作原理
 FancyScrollView在更新单元格的位置时，将显示在屏幕上的范围内的值赋予每一个单元格。在单元格侧以0.0 ~ 1.0的值为基础，可以自由控制滚动中的外观。
@@ -91,7 +89,7 @@ public class MyScrollViewCell : FancyScrollViewCell<MyCellDto>
 }
 ```
 ### Inspector设置
-![](/images/FancyScrollView/inspector.png)
+![](https://ws1.sinaimg.cn/large/006tNc79ly1fzgwmeefqnj30hs0frwgd.jpg)
 #### My Scroll View
 
 | 属性           | 说明                                                         |
@@ -135,7 +133,7 @@ public class MyScrollViewCell : FancyScrollViewCell<MyCellDto>
 1. 将ScrollView 的「Loop」打开后，将单元格置于循环状态。
 2. 在使用例子中 ScrollPositionController 的情况下，将「Movement Type」设定为「Unrestricted」，就变成无限滚动了。
 
-![](/images/FancyScrollView/infiniteScrollSettings.png)
+![](https://ws2.sinaimg.cn/large/006tNc79ly1fzgwmt40esj30hs098t9s.jpg)
 
 请参考例子（[Examples/03_InfiniteScroll](https://github.com/setchi/FancyScrollView/tree/master/Assets/FancyScrollView/Examples/03_InfiniteScroll)）。
 
