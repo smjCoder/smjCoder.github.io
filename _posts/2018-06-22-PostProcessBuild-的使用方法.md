@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 关于Unity3D通过代码控制编译XCode工程
-subtitle: 
+title: PostProcessBuild 的使用方法
+subtitle: Unity3D 通过代码控制编译 XCode 工程
 date: 2018-06-22
 author: JY
 header-img: 
@@ -10,10 +10,12 @@ tags:
     - SDK
     - Unity
 ---
-> 最近在工作中遇到了一些集成SDK的问题，由于整个框架都是自动化的，所以SDK得集成也需要把所需的编译环境和启动代码写在Unity的脚本中。这两天也查找了很多资料，最终完成了集成，在这里记录一下过程和重点。
+> 最近在工作中遇到了一些集成 SDK 的问题，由于整个框架都是自动化的，所以 SDK 得集成也需要把所需的编译环境和启动代码写在 Unity 的脚本中。这两天也查找了很多资料，最终完成了集成，在这里记录一下过程和重点。
 
 
-#### 主要使用的方法
+
+
+# 主要使用的方法
 
 ```c#
 public class iOSPostProcessBuild
@@ -38,9 +40,9 @@ public class iOSPostProcessBuild
 }
 ```
 
-在`[PostProcessBuild]`下的方法会在build完成之后被调用，在这个方法对XCode工程的编译选项和plist文件进行编辑。
+在`[PostProcessBuild]`下的方法会在build完成之后被调用，在这个方法对 XCode 工程的编译选项和 plist 文件进行编辑。
 
-#### 对XCode的编译选项进行操作
+对 XCode 的编译选项进行操作
 
 需要引入`UnityEditor.iOS.Xcode`命名空间。
 
@@ -57,7 +59,9 @@ pbxProj.AddFileTobuild(targetGuid, pbxProj.AddFile("usr/lib/libsqlite3.tbd", "Fr
 File.WriteAllText(projectPath, pbxProj.WriteToString());
 ```
 
-#### 修改Info.plist文件
+
+
+# 修改Info.plist文件
 
 ```c#
 string plistPath = Path.Combine(pathToBuildProject, "Info.plist");
@@ -79,7 +83,9 @@ nsappDic.SetBoolean("NSAllowsArbitraryLoads", true);
 File.WriteAllText(plistPath, plist.WriteToString());
 ```
 
-#### 修改OC代码
+
+
+# 修改OC代码
 
 ```c#
 namespace XCodeBuilder.XCodeEditor
@@ -168,7 +174,9 @@ string newCode = "需\n" +
 UnityAppController.WriteBelow("指定代码", newCode);
 ```
 
-#### 添加自定义类库
+
+
+# 添加自定义类库
 
 ```c#
 //将库文件从Assets中拷贝到XCode工程中

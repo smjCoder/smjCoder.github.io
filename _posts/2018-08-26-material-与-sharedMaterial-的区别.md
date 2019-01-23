@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mesh中的material与sharedMaterial
-subtitle: 
+title: material 与 sharedMaterial 的区别
+subtitle: Mesh 中的 material 与 sharedMaterial
 date: 2018-08-26
 author: JY
 header-img: 
@@ -9,12 +9,14 @@ catalog: true
 tags: 
     - Unity
 ---
-> 改变Mesh的material时的注意事项
+> 改变 Mesh 的 material 时的注意事项
 
 
-也是解决Bug时发现的问题，我们的美术发现他们使用的材质在Editor下和客户端下的offset移动速度不一样，在手机端明显要快两倍到三倍。
 
-我们的offset平移代码是这样的
+
+也是解决 Bug 时发现的问题，我们的美术发现他们使用的材质在 Editor 下和客户端下的 offset 移动速度不一样，在手机端明显要快两倍到三倍。
+
+我们的 offset 平移代码是这样的
 
 ```c#
 void Update()
