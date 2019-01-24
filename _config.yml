@@ -21,7 +21,7 @@ featured-condition-size: 1              # 相同标签数量大于这个数，�
 
 # SNS settings
 RSS: true
-#weibo_username:     qiubaiying
+weibo_username:     junyuyuan
 #zhihu_username:     qiubaiying
 github_username:    junyuyuan
 #facebook_username:  baiying.qiu.7
