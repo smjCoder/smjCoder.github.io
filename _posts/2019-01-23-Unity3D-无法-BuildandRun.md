@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unity3D-无法-BuildAndRun
+title: Unity3D 无法 BuildAndRun
 subtitle: 电脑 adb interface 驱动失效解决办法
 date: 2019-01-23
 author: JY
