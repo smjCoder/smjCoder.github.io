@@ -15,7 +15,7 @@ tags:
 
 想要你的 APP 启动另外的 APP，就需要在下图中添加相关APP的信息
 
-![](https://ws1.sinaimg.cn/large/006tNc79ly1fzgwsrs0g0j30ly0cm404.jpg)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141536.jpg?x-oss-process=style/iPic)
 
 但是想要集成到自动编译打包中，肯定不能手动的在图形界面中添加了
 
