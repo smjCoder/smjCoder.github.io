@@ -5,7 +5,7 @@ subtitle: 电脑 adb interface 驱动失效解决办法
 date: 2019-01-23
 author: JY
 header-img: 
-catalog: true
+catalog: false
 tags: 
     - Unity
 ---
