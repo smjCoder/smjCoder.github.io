@@ -20,31 +20,31 @@ tags:
 
 [GitHub 网站](https://github.com)
 
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063425.jpg?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033951.jpg?x-oss-process=style/iPic)
 
 # 创建网站仓库
 
 ## 点击创建仓库按钮
 
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063426.jpg?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033953.jpg?x-oss-process=style/iPic)
 
 ## 创建仓库，输入仓库名称
 
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063428.jpg?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-33954.jpg?x-oss-process=style/iPic)
 
 ## 创建成功
 
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-63429.jpg?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033956.jpg?x-oss-process=style/iPic)
 
 # 使用MWeb生成静态网站
 
 ## 将文档库转换成静态网站
 
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063429.jpg?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033957.jpg?x-oss-process=style/iPic)
 
 ## 设置静态网站信息
 
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063430.jpg?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033958.jpg?x-oss-process=style/iPic)
 
 # Clone 你的 pages 到 MWeb 静态网站生成目录中
 
@@ -61,14 +61,14 @@ __注意：__ 在你 git 发布出问题的时候，也可以用上面的 3、4�
 
 ## 在下图，在 “MWeb 偏好设置” - “扩展” - “发布脚本” 中配置。
 
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063431.jpg?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033959.jpg?x-oss-process=style/iPic)
 
 ## 点击加载例子
 
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063432.jpg?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-034000.jpg?x-oss-process=style/iPic)
 
 ## 使用发布脚本
 
 使用方法非常简单，右键网站分类，选择 “复制发布脚本命令并打开终端（Terminal）...”，当终端打开后，在终端中按快捷键 `Command + V` 即可。如图：
 
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063433.jpg?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-034002.jpg?x-oss-process=style/iPic)

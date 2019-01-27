@@ -16,15 +16,15 @@ tags:
 
 1. 在设备管理器中，找到驱动异常的 ADB Interface，右键， __“更新驱动程序软件”__
 2. 选择 __“浏览计算机以查找驱动程序软件”__
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063101.png?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-151312.png?x-oss-process=style/iPic)
 3. 继续选择 __“从计算机的设备驱动程序列表中选择”__
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063102.png?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-WechatIMG29.png?x-oss-process=style/iPic)
 4. 不做任何选择，直接点击 __“下一步”__
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063104.png?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-WechatIMG35.png?x-oss-process=style/iPic)
 5. 选择 __“从磁盘安装”__ ， __“浏览”__ Android SDK 目录中的 `android_winusb.inf` 文件，路径为 `%SDK目录%\extras\google\usb_driver`，点击 “确定”
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063105.png?x-oss-process=style/iPic)
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063106.png?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-WechatIMG30.png?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-WechatIMG31.png?x-oss-process=style/iPic)
 6. 选择 __“Android Composite ADB Interface”__ ，点击 __“下一步”__
-![](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063107.png?x-oss-process=style/iPic)
+![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-WechatIMG36.png?x-oss-process=style/iPic)
 7. 忽略安装中的警告，选择 __“继续安装”__
 8. 安装完成
