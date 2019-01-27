@@ -26,7 +26,7 @@ tags:
 
 首先进入官网下载 [Node.js](https://nodejs.org/en/)
 
-![14815973227023](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033939.png?x-oss-process=style/iPic)
+![14815973227023](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063416.png?x-oss-process=style/iPic)
 
 ## 三. 使用终端命令安装 Cordova
 
@@ -37,7 +37,7 @@ sudo npm install -g cordova
 ```
 输入电脑密码后等待一会就能安装成功了。如下图
 
-![14815976759197](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033940.png?x-oss-process=style/iPic)
+![14815976759197](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063417.png?x-oss-process=style/iPic)
 
 如未成功，请参考如下解决方案
 
@@ -47,7 +47,7 @@ sudo npm install -g cordova
 ## 四. 创建项目
 
 1. 首先请建立一个文件夹，并通过终端 cd 进去 不然创建的项目在根目录下 你很难找到它
-![14815982414230](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033942.png?x-oss-process=style/iPic)
+![14815982414230](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063418.png?x-oss-process=style/iPic)
 2. 通过终端命令创建一个项目
 ```
 cordova create firstCordovaDoc com.aimi.firstCordova firstCordova
@@ -60,13 +60,13 @@ cordova create firstCordovaDoc com.aimi.firstCordova firstCordova
 ```
 cordova platform add ios
 ```
-![14815990664527](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-33943.png?x-oss-process=style/iPic)
+![14815990664527](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063419.png?x-oss-process=style/iPic)
 此时在项目文件夹下的`platforms`文件夹中会多出`ios`文件夹，进入后就可以看到ios工程了。
-![14815992218387](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033944.png?x-oss-process=style/iPic)
+![14815992218387](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063420.png?x-oss-process=style/iPic)
 4. 最后我们来试用一下`Cordova`
 
 `Cordova`的开发是使用h5开发，所以我们要找到其入口`Index.html`，如下图
-![14815994855314](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033945.png?x-oss-process=style/iPic)
+![14815994855314](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063421.png?x-oss-process=style/iPic)
 __注意：是在`Staging`文件夹下的`Index.html`文件，而非根目录下的那个__
 
 简单写一点html代码，替换index.html中的代码，看看混合开发的h5 app应用
@@ -101,10 +101,10 @@ __注意：是在`Staging`文件夹下的`Index.html`文件，而非根目录下
 
 1. 首先找到`Plugins`文件夹，该文件夹下存放的是所有插件的源码文件
 2. 创建我们的插件文件夹 com.anCordova.anAlert 文件夹，插件文件夹的命名规范还是要遵守一下的，类似 bundleID 很好理解
-![14816076286904](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033947.png?x-oss-process=style/iPic)
+![14816076286904](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063422.png?x-oss-process=style/iPic)
 
 3. 在刚创建的文件夹下新建代码文件，继承cordova框架的`CDVPlugin`
-![14816076963678](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-33948.png?x-oss-process=style/iPic)
+![14816076963678](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-63423.png?x-oss-process=style/iPic)
 4. 改动一下`#import`，因为`.h`文件报错，这是 Cordova 框架的bug，毕竟是改写的原生代码。
 
 ```
@@ -224,7 +224,7 @@ JS 在调用时就直接使用该对象名进行调用
 ```
 到此为止,简易插件的开发已经完成了,最终效果走一下
 
-![14816089994096](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033949.gif)
+![14816089994096](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063423.gif?x-oss-process=style/iPic)
 
 ## 六. 将 oc 方法映射成 js 代码上,并将插件打包供 h5 开发人员使用
 
@@ -248,7 +248,7 @@ JS 在调用时就直接使用该对象名进行调用
 > 
 > 请创建好这样的结构后再进行后续动作
 
-![14816096596614](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-26-033950.png?x-oss-process=style/iPic)
+![14816096596614](https://jy-blog.oss-cn-beijing-internal.aliyuncs.com/blog/2019-01-27-063425.png?x-oss-process=style/iPic)
 
 ## 二.编写 JS 代码
 
