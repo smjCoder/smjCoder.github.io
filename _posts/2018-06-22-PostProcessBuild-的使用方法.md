@@ -15,7 +15,7 @@ tags:
 
 # 主要使用的方法
 
-```c#
+```csharp
 public class iOSPostProcessBuild
 {
     //该属性是在build完成后，被调用执行的
@@ -38,13 +38,13 @@ public class iOSPostProcessBuild
 }
 ```
 
-在`[PostProcessBuild]`下的方法会在build完成之后被调用，在这个方法对 XCode 工程的编译选项和 plist 文件进行编辑。
+在 `[PostProcessBuild]` 下的方法会在build完成之后被调用，在这个方法对 XCode 工程的编译选项和 plist 文件进行编辑。
 
 对 XCode 的编译选项进行操作
 
-需要引入`UnityEditor.iOS.Xcode`命名空间。
+需要引入 `UnityEditor.iOS.Xcode` 命名空间。
 
-```c#
+```csharp
 //添加flag
 pbxProj.AddBuildProperty(targetGuid, "OTHER_LDFLAGS", "-ObjC");
 //关闭BitCode
@@ -57,11 +57,9 @@ pbxProj.AddFileTobuild(targetGuid, pbxProj.AddFile("usr/lib/libsqlite3.tbd", "Fr
 File.WriteAllText(projectPath, pbxProj.WriteToString());
 ```
 
-
-
 # 修改Info.plist文件
 
-```c#
+```csharp
 string plistPath = Path.Combine(pathToBuildProject, "Info.plist");
 PlistDocument plist = new PlistDocument();
 plist.ReadFromFile(plistPath);
@@ -81,11 +79,9 @@ nsappDic.SetBoolean("NSAllowsArbitraryLoads", true);
 File.WriteAllText(plistPath, plist.WriteToString());
 ```
 
-
-
 # 修改OC代码
 
-```c#
+```csharp
 namespace XCodeBuilder.XCodeEditor
 {
     public partial class XCodeClass : System.IDisposable
@@ -153,7 +149,7 @@ namespace XCodeBuilder.XCodeEditor
 }
 ```
 
-```c#
+```csharp
 //插入代码
 //读取UnityAppController.mm文件
 string unityAppControllerPath = pathToBuildProject + "/Classes/UnityAppController.mm";
@@ -162,21 +158,19 @@ XCodeClass UnityAppController = new XCodeClass(unityAppControllerPath);
 //在指定代码后面增加一行代码
 UnityAppController.WriteBelow("指定代码", "需要添加的代码");
 //在指定代码后面增加一大行代码
-string newCode = "需\n" + 
-    "要\n" + 
-    "添\n" + 
-    "加\n" + 
-    "的\n" + 
+string newCode = "需\n" +
+    "要\n" +
+    "添\n" +
+    "加\n" +
+    "的\n" +
     "大段代码。";
 
 UnityAppController.WriteBelow("指定代码", newCode);
 ```
 
-
-
 # 添加自定义类库
 
-```c#
+```csharp
 //将库文件从Assets中拷贝到XCode工程中
 public static void CopyDirectory(string srcPath, string dstPath, string[] excludeExtensions, bool overwrite = true)
 {
@@ -193,30 +187,30 @@ public static void CopyDirectory(string srcPath, string dstPath, string[] exclud
 }
 ```
 
-```c#
+```csharp
 #region 添加资源文件(中文路径 会导致 project.pbxproj 解析失败)
 string frameworksPath = Application.dataPath + "库文件所在的文件夹";
 string[] directories = Directory.GetDirectories(frameworksPath, "*", SearchOption.TopDirectoryOnly);
 for (int i = 0; i < directories.Length; i++)
 {
-	string path = directories[i];
+    string path = directories[i];
 
-	string name = path.Replace(frameworksPath + "/", "");
-	string destDirName = pathToBuildProject + "目标路径" + name;
+    string name = path.Replace(frameworksPath + "/", "");
+    string destDirName = pathToBuildProject + "目标路径" + name;
 
-	if (Directory.Exists(destDirName))
-		Directory.Delete(destDirName, true);
-            
-	Debug.Log(path + " => " + destDirName);
-	CopyDirectory(path, destDirName, new string[] { ".meta", ".framework", ".bundle", ".mm", ".c", ".m", ".h", ".xib", ".a", ".plist", ".org", "" }, false);
+    if (Directory.Exists(destDirName))
+        Directory.Delete(destDirName, true);
+  
+    Debug.Log(path + " => " + destDirName);
+    CopyDirectory(path, destDirName, new string[] { ".meta", ".framework", ".bundle", ".mm", ".c", ".m", ".h", ".xib", ".a", ".plist", ".org", "" }, false);
 
-	foreach (string file in Directory.GetFiles(destDirName, "*.*", SearchOption.AllDirectories))
-	{
-		pbxProject.AddFileToBuild(targetGuid, pbxProject.AddFile(destDirName, "目标路径" + name, PBXSourceTree.Sdk));
-		pbxProject.AddBuildProperty(targetGuid, "FRAMEWORK_SEARCH_PATHS", "$(SRCROOT)" + "目标路径");
-		pbxProject.AddBuildProperty(targetGuid, "HEADER_SEARCH_PATHS", "$(SRCROOT)" + "目标路径");
-		pbxProject.AddBuildProperty(targetGuid, "LIBRARY_SEARCH_PATHS", "$(SRCROOT)" + "目标路径");
-	}
+    foreach (string file in Directory.GetFiles(destDirName, "*.*", SearchOption.AllDirectories))
+    {
+        pbxProject.AddFileToBuild(targetGuid, pbxProject.AddFile(destDirName, "目标路径" + name, PBXSourceTree.Sdk));
+        pbxProject.AddBuildProperty(targetGuid, "FRAMEWORK_SEARCH_PATHS", "$(SRCROOT)" + "目标路径");
+        pbxProject.AddBuildProperty(targetGuid, "HEADER_SEARCH_PATHS", "$(SRCROOT)" + "目标路径");
+        pbxProject.AddBuildProperty(targetGuid, "LIBRARY_SEARCH_PATHS", "$(SRCROOT)" + "目标路径");
+    }
 }
 #endregion
 ```

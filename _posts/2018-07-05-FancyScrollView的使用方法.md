@@ -12,19 +12,21 @@ tags:
 ---
 
 > FancyScrollView，一个通用的Unity ScrollView组件
->
 
 # FancyScrollView [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](http://mit-license.org)
+
 一个通用的ScrollView组件，可实现高度灵活的Cell动画。还支持无限滚动。
 
-![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141545.jpg)
-![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141545.gif)
-![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141546.gif)
+![效果图](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141545.jpg)
+![效果图](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141545.gif)
+![效果图](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141546.gif)
 
 ## 工作原理
+
 FancyScrollView在更新单元格的位置时，将显示在屏幕上的范围内的值赋予每一个单元格。在单元格侧以0.0 ~ 1.0的值为基础，可以自由控制滚动中的外观。
 
 ## 使用方法
+
 最简方法
 
 - 向单元格传递数据的对象
@@ -34,13 +36,16 @@ FancyScrollView在更新单元格的位置时，将显示在屏幕上的范围�
 以上是必须实现的方法。
 
 ### 相关脚本
+
 定义用于将数据传递给单元格的对象。
+
 ```csharp
 public class MyCellDto
 {
     public string Message;
 }
 ```
+
 继承FancyScrollView，实现自己的滚动视图。
 
 ```csharp
@@ -64,7 +69,9 @@ public class MyScrollView : FancyScrollView<MyCellDto>
     }
 }
 ```
+
 继承FancyScrollViewCell并实现自己的单元格
+
 ```csharp
 using UnityEngine;
 using UnityEngine.UI;
@@ -87,8 +94,11 @@ public class MyScrollViewCell : FancyScrollViewCell<MyCellDto>
     }
 }
 ```
+
 ### Inspector设置
-![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141547.jpg)
+
+![设置](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141547.jpg)
+
 #### My Scroll View
 
 | 属性           | 说明                                                         |
@@ -116,28 +126,35 @@ public class MyScrollViewCell : FancyScrollViewCell<MyCellDto>
 
 ## Q&A
 
-#### 即使数据的数量很多，展示也没有问题么？
+### 即使数据的数量很多，展示也没有问题么？
+
 因为单元格只生成显示所需的数量，所以数据件数对性能的影响很小。
 比起数据的数量。每个单元格之间的间隔（同时存在的单元格的数量）和单元格的展示效果，对展示有一定影响。
 
-#### 我能够自己控制滚动位置么？
+### 我能够自己控制滚动位置么？
+
 滚动的位置可以自由控制。可以将例子中使用的ScrollPositionController 更换成自己的实现。
 
-#### 可以接收到在单元格中发生的事件么？
+### 可以接收到在单元格中发生的事件么？
+
 可以使用在单元格中发生的所有事件。
 请参考例子（[Examples/02_CellEventHandling](https://github.com/setchi/FancyScrollView/tree/master/Assets/FancyScrollView/Examples/02_CellEventHandling)）。
 
-#### 能够使用单元格无限滚动么？
+### 能够使用单元格无限滚动么？
+
 对于使用无限滚动。步骤如下。
+
 1. 将ScrollView 的「Loop」打开后，将单元格置于循环状态。
 2. 在使用例子中 ScrollPositionController 的情况下，将「Movement Type」设定为「Unrestricted」，就变成无限滚动了。
 
-![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141548.jpg)
+![设置](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141548.jpg)
 
 请参考例子（[Examples/03_InfiniteScroll](https://github.com/setchi/FancyScrollView/tree/master/Assets/FancyScrollView/Examples/03_InfiniteScroll)）。
 
 ## 开发环境
+
 Unity 2017.2.0f3
 
 ## LICENSE
+
 MIT
