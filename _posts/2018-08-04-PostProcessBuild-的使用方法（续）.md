@@ -21,7 +21,7 @@ tags:
 
 上图的本质呢，其实还是 Info.plist 文件，只是 Xcode 帮你把 plist 可视化了而已，所以我们的具体操作还是通过 Unity 脚本去修改 plist 文件就可以了
 
-```c
+```csharp
 string plistPath = Path.Combine(pathToBuildProject, "Info.plist");
 PlistDocument plist = new PlistDocument();
 plist.ReadFromFile(plistPath);

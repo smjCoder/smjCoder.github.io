@@ -15,7 +15,7 @@ tags:
 
 我们的 offset 平移代码是这样的
 
-```c
+```csharp
 void Update()
 {  
     _material.mainTextureOffset += new Vector2(Speed.x, Speed.y) * Time.deltaTime;
@@ -26,7 +26,7 @@ void Update()
 
 直到我发现
 
-```c
+```csharp
 void Start()
 {
     _material = gameObject.GetComponent<Renderer>().GetMaterial();
@@ -35,7 +35,7 @@ void Start()
 
 我们的material并不是通过 `.material` 获得的，所以我跟进 `GetMaterial()` 方法，发现
 
-```c
+```csharp
 public static Material GetMaterial(this Renderer renderer)
 {
 #if UNITY_EDITOR
@@ -59,7 +59,7 @@ public static Material GetMaterial(this Renderer renderer)
 
 解决办法也比较简单
 
-```c
+```csharp
 void Update()
 {
     _offsetX += Time.deltaTime * Speed.x;
@@ -79,7 +79,7 @@ __注：这种方法只能用于复用的材质纹理移动速度统一且同步
 > 网上的解决方案如下：
 > <http://www.xuanyusong.com/archives/2530>
 > 编辑器下使用 material， 其他平台使用 sharedMaterial
-> ```c
+> ```csharp
 > public static Material GetMaterial(Renderer render)  
 > {  
 > #if UNITY_EDITOR  
