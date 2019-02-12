@@ -15,13 +15,13 @@ tags:
 
 想要你的 APP 启动另外的 APP，就需要在下图中添加相关APP的信息
 
-![](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141536.jpg?x-oss-process=style/iPic)
+![添加相关APP的信息](https://jy-blog.oss-cn-beijing.aliyuncs.com/blog/2019-01-24-141536.jpg?x-oss-process=style/iPic)
 
 但是想要集成到自动编译打包中，肯定不能手动的在图形界面中添加了
 
 上图的本质呢，其实还是 Info.plist 文件，只是 Xcode 帮你把 plist 可视化了而已，所以我们的具体操作还是通过 Unity 脚本去修改 plist 文件就可以了
 
-```c#
+```c
 string plistPath = Path.Combine(pathToBuildProject, "Info.plist");
 PlistDocument plist = new PlistDocument();
 plist.ReadFromFile(plistPath);
@@ -33,11 +33,11 @@ PlistElementArray urlAry;
 PlistElement urlel;
 if (rootDict.values.TryGetValue(urlKey, out urlel))
 {
-	urlAry = lspel.AsArray();
+    urlAry = lspel.AsArray();
 }
 else
 {
-	urlAry = rootDict.CreateArray(urlKey);
+    urlAry = rootDict.CreateArray(urlKey);
 }
 
 PlistElementDict qqdic = urlAry.AddDict();
