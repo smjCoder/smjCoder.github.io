@@ -94,7 +94,11 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "现实之镜",
-        href: "https://wuyueyang.github.io/"
+      title: "现实之镜",
+      href: "https://wuyueyang.github.io/"
+    },
+    {
+      title: "3'Heat NoteBook",
+      href: "https://genesisl.github.io/"
     }
 ]
